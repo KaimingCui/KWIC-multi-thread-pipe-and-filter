@@ -13,7 +13,7 @@ index system outputs a listing of all circular shifts of all lines in alphabetic
 
 For example:
 
-![GitHub](https://avatars2.githubusercontent.com/u/3265208?v=3&s=100 "GitHub,Social Coding")
+![GitHub](https://github.com/KaimingCui/KWIC-multi-thread-pipe-and-filter/blob/master/1.png)
 
 ### Required to perform following tasks.
 1. Implement KWIC system using pipe-and-filter architectural pattern. Following
@@ -83,3 +83,13 @@ ARCHITECTURE PIPE and Filter
 FILTER Architecture PIPE and
 
 AND Filter Architecture PIPE
+
+## Explain my program
+
+Pipe class represents a pipe connect two components (Filters). It has PipeReader and PipeWriter that allow characters can go through the pipe from one filter to another filter.
+
+Filter abstract class represents a component in KWIC system. It contains two Pipe object. One for read another for write. Filter implements Runable interface so that each filter can be a thread.
+
+The other functional Filters that extends Filter class.
+
+
