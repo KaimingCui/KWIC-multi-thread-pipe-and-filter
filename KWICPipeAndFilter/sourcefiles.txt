@@ -1,0 +1,10 @@
+KWICSystem.java
+KWICStarter.java
+Input.java
+UpperTransform.java
+Alphabetizer.java
+CircularShifter.java
+DeleteStopword.java
+Output.java
+Filter.java
+Pipe.java

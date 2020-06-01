@@ -1,0 +1,22 @@
+1. I use JAVA to do my project.
+
+2. I applied parallel processing in my project, each filter is a thread.
+
+3. Three are a input file that contains the inputs:
+
+Pipe and Filter
+Software Architecture in Practice
+
+4. The noise file contains two words that are 'and', 'a'. The DeleteStopword filter will delete the ouput lines that start with 'and','a','AND','A'.
+
+5. The output file will be created after run the project, it will contain the output lines.
+
+6. The UpperTransform filter will convert the first word of a line to upper letters.
+
+7. The order of filters is Input-UpperTransform-CircularShifter-Alphabetizer-UpperTransform-DeleteStopword-Output
+
+8. KWICSystem class is is the main function, it will call KWICStarter. KWICStarter will instantiate the Pipe objects and connect each filter. It also start the threads.
+
+9. Filter is the parrent class which implements Runnable interface.
+
+10. Pipe is a pipe that contain PipeReader and PipeWriter.

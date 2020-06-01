@@ -1,0 +1,4 @@
+Pipe and Filter
+Software Architecture in Practice
+He is a man
+It is an apple

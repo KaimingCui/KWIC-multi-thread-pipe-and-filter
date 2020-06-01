@@ -1,0 +1,33 @@
+1. Describe the key benefits and consequences of your design choice.
+
+Answer:
+ 	benefits:
+ 	1. Good flexibility of system, it is easy to reassemble the system by recombining or changing the filters.
+
+ 	2. The filters are reuseable.
+
+ 	3. I applied paarallel processing in my project. Each filter is a thread, therefore the proformance is improved.
+
+ 	4.Every filter has good independency. Change any of them would not effect the others and the whole system.
+
+ 	cons:
+ 	1. Data is often converted between filters and pipes, this increases system spending and complexity.
+
+ 	2. It is hard to achieve computer-human interaction in Pipe-and-Filter.
+
+ 	3. The parallel processing is not as good as I thought because each thread has to wait the data flow. Most time they are suspended.
+
+ 	4. Handling Exceptions is very hard.
+
+2. Would it be possible to implement an interactive version of the KWIC system, which will allow users to delete certain lines from the data flow but still not violate any of the above defined filter properties?
+
+Answer:  
+   	Pipe and Filter is a not pattern that can support good interaction functionality. But it is possible for KWIC system to delete certain lines from the data flow. The solution is to add a control filter between Input filter and the first UppercaseTransform filter that allow user to delete certain lines from the data flow. And also add this control filter before output filter. This filter will list all lines and then make users choose which line they want to delete or do not delete any lines. After deletion, it will transform the changed data through a pipe to next filter. This control filter will not affect any other filters.
+
+3. Discuss your experiences (good or bad) with Software Architecture in your previous projects. This could include work and/or school experience. Remember that all software products have some kind of software architecture.
+
+Answer:
+	I do not have much experiences with Software Architecture because I was not a CS student before. But I do did some protects that may reflect the knowledge in Software Architecture. I built a database for student dormitory management as my course project. In this project, it's pattern seems like MVC pattern. The database store the core data and functionalities. Different users can use different controlers and get different views. For instance, the dormitory managers are able to see more details about the data than other users, and they are allowed to change the data. The normal students are only allowed to look through the data but not allowed to do any changes. There are some other users that all users can get different views from the database. Even though all users are actually using the same data, but they get different views and different controllers. I think this is same as MVC pattern.
+
+
+
